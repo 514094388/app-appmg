@@ -1,0 +1,14 @@
+-- Create table
+create table CONTENT
+(
+  ID       VARCHAR2(15) not null,
+  HREF     VARCHAR2(200),
+  TITLE    VARCHAR2(200),
+  CONTENT  CLOB,
+  PAR_ID   VARCHAR2(15),
+  STYLE_ID VARCHAR2(15),
+  SEQUENCE NUMBER
+);
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table CONTENT
+  add unique (ID);
